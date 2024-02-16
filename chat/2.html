@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Clever | Portal</title>
+    <link rel="stylesheet" href="/Styles/chat.css">
+    <link rel="icon" href="/Images/Logo.png"/>
+  </head>
+  <body>
+    <div id="header">
+      <div id="title">Disford</div>
+      <div id="logo"><img src="/Images/math.png"></div>
+    </div>
+    <ul id="messages"></ul>
+    <form id="form" action="">
+      <input id="input" autocomplete="off"/>
+      <button>
+        <label for="file">
+          Image
+        </label>
+      </button>
+      <input type="file" id="file" accept="image/*" style="display: none;"/>
+
+      <button class="button">Send</button>
+    </form>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const date = new Date();
+        var Name = prompt('What\'s Your Name?');
+        if(Name == "" || Name == null || Name == undefined) {
+            Name = "Anonymous";
+        }
+
+        var socket = io();
+        var messages = document.getElementById('messages');
+        var form = document.getElementById('form');
+        var input = document.getElementById('input');
+
+        form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        SubmitText();
+        });
+
+        function SubmitText() {
+          if(input.value) {
+            let msg = input.value;
+            var date =  new Date();
+            var dateFull = date.getMonth()+1+'/'+date.getDate()+'/'+date.getFullYear()+' at '+date.getHours()+':'+date.getMinutes();
+            msg = msg.replace(/:skull:/g, '💀').replace(/:sob:/g, '😭').replace(/:moyai:/g, '🗿').replace(/:rage:/g, '😡').replace(/:angry:/g, '😠').replace(/:nerd:/g, '🤓').replace(/:clown:/g, '🤡').replace(/:up:/g, '👍').replace(/:down:/g, '👎');
+            socket.emit("chat message 2", { name: Name, message: msg, date: dateFull });
+            input.value = '';
+          }
+        }
+
+        document.getElementById('file').addEventListener('change', function() {
+        const reader = new FileReader();
+        reader.onload = function() {
+            const base64 = this.result.replace(/.*base64,/, '');
+            socket.emit('image 2', base64);
+        };
+        reader.readAsDataURL(this.files[0]);
+
+        }, false);
+
+        socket.on("chat message 2", function (msg) {
+          a(msg);
+        });
+
+        socket.on('image 2', function (image) {
+            i(image);
+        });
+
+        function i(image) {
+            image = `<img src="data:image/jpeg;base64,` + image + `\">`;
+            var item = document.createElement('div');
+            item.innerHTML = image;
+            messages.appendChild(item);
+            Bottom();
+        }
+
+        function a(msg) {
+          var item = document.createElement('li');
+          item.innerHTML = `<span class="Name">${msg.name}</span><span class="Date">${msg.date}</span><br><span class="Msg">${msg.message}</span>`;
+
+          messages.appendChild(item);
+          Bottom();
+        }
+
+        function Bottom() {
+            window.scrollTo(0, document.body.scrollHeight);
+        }
+
+        Bottom();
+    </script>
+  </body>
+</html>

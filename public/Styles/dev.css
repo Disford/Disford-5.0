@@ -1,0 +1,192 @@
+/************* useful stuff *************/
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+#Version {
+    position: absolute;
+    bottom: 2%;
+    right: 2%;
+    color: rgb(69,69,69);
+}
+/************* /useful stuff *************/
+
+/************* navBar *************/
+#navBar {
+    position: absolute;
+    width: 100%;
+    height: 7%;
+    left: 0;
+    top: 0;
+    padding: 0;
+
+    background-color: #0c0c0c;
+}
+
+#navLogo {
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%);
+    left: 0.5%;
+    width: 2.4%;
+    height: 72%;
+    border-radius: 10px;
+}
+
+#navTitle {
+    color: white;
+    position: absolute;
+    font-size: 2rem;
+    left: 3.3%;
+    top: 40%;
+    transform: translate(0%, -40%);
+}
+
+.navButton {
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%);
+
+    width: 9%;
+    height: 80%;
+
+    background-color: #191919;
+    border: 5px #7f7f7f solid;
+    border-radius: 10px;
+    color: white;
+
+    transition: 200ms;
+}
+
+.navButton:hover {
+    background-color: #d1d1d1;
+    color: black;
+    border-color: #191919;
+    cursor: pointer;
+}
+
+.navButtonText {
+    font-size: 1rem;
+    cursor: default;
+    text-wrap: nowrap;
+}
+
+.navButtonText:hover {
+    cursor: pointer;
+}
+
+#navHome {
+    right: 32%;
+}
+
+#navChat {
+    right: 22%;
+}
+
+#navGames {
+    right: 12%;
+}
+
+#navProxy {
+    right: 2%;
+}
+/************* /navBar *************/
+
+/************* main *************/
+#motdForm {
+    position: absolute;
+    width: 15%;
+    height: 50%;
+    left: 33%;
+    top: 20%;
+    transform: translate(-33%, -20%);
+    background-color: #0c0c0c;
+    border-radius: 5px;
+    border: white solid 3px;
+}
+
+#motdText {
+    color: white;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -5%);
+    height: 10%;
+}
+
+#motdInput {
+    border: white solid 2px;
+    border-radius: 3px;
+    background-color: #1c1c1c;
+    color: white;
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    transform: translate(-50%, -5%);
+    height: 10%;
+}
+
+#motdSubmit {
+    border: white solid 2px;
+    border-radius: 3px;
+    background-color: #1c1c1c;
+    color: white;
+    position: absolute;
+    top: 26%;
+    left: 50%;
+    transform: translate(-50%, -5%);
+    width: 90%;
+    height: 15%;
+}
+
+#motdSubmit:hover {
+    border-color: #1c1c1c;
+    background: white;
+    color: black;
+}
+
+
+
+#chatForm {
+    position: absolute;
+    width: 15%;
+    height: 50%;
+    left: 67%;
+    top: 20%;
+    transform: translate(-67%, -20%);
+    background-color: #0c0c0c;
+    border-radius: 5px;
+    border: white solid 3px;
+}
+
+#chatText {
+    color: white;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -5%);
+    height: 10%;
+}
+
+.chatButton {
+    margin-top: 2%;
+    margin-left: 50%;
+    transform: translate(-50%, -2%);
+    width: 90%;
+    height: 10%;
+    border: white solid 2px;
+    border-radius: 3px;
+    background-color: #1c1c1c;
+    color: white;
+    transition: 200ms;
+}
+
+.chatButton:hover {
+    border-color: #1c1c1c;
+    background: white;
+    color: black;
+}
+/************* /main *************/

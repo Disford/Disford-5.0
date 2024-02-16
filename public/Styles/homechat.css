@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+#Version {
+    position: absolute;
+    bottom: 2%;
+    left: 2%;
+    color: rgb(69,69,69);
+}
+
+#Title {
+    background: linear-gradient(120deg, #0038FF, #B800D6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: absolute;
+    text-align: center;
+    margin-top: 5%;
+    margin-left: 50%;
+    transform: translate(-50%, 0%);
+    font-size: 500%;
+}
+
+#form {
+    position: absolute;
+    margin-top: 12%;
+    margin-left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+/************* navBar *************/
+#navBar {
+    position: absolute;
+    width: 100%;
+    height: 7%;
+    left: 0;
+    top: 0;
+    padding: 0;
+
+    background-color: #0c0c0c;
+}
+
+#navLogo {
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%);
+    left: 0.5%;
+    width: 2.4%;
+    height: 72%;
+    border-radius: 10px;
+}
+
+#navTitle {
+    color: white;
+    position: absolute;
+    font-size: 2rem;
+    left: 3.3%;
+    top: 40%;
+    transform: translate(0%, -40%);
+}
+
+.navButton {
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%);
+
+    width: 9%;
+    height: 80%;
+
+    background-color: #191919;
+    border: 5px #7f7f7f solid;
+    border-radius: 10px;
+    color: white;
+
+    transition: 200ms;
+}
+
+.navButton:hover {
+    background-color: #d1d1d1;
+    color: black;
+    border-color: #191919;
+    cursor: pointer;
+}
+
+.navButtonText {
+    font-size: 1rem;
+    cursor: default;
+    text-wrap: nowrap;
+}
+
+.navButtonText:hover {
+    cursor: pointer;
+}
+
+#navHome {
+    right: 32%;
+}
+
+#navChat {
+    right: 22%;
+}
+
+#navGames {
+    right: 12%;
+}
+
+#navProxy {
+    right: 2%;
+}
+/************* /navBar *************/

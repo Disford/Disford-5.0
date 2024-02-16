@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    padding-right: 5%;
+}
+
+#Version {
+    position: absolute;
+    bottom: 2%;
+    left: 2%;
+    color: rgb(69,69,69);
+}
+
+#SideContainer {
+    position: absolute;
+    top: 0;
+    left: 72.5%;
+    width: 27.5%;
+    height: 100%;
+}
+
+#Title {
+    background: linear-gradient(120deg, #0038FF, #B800D6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 500%;
+    text-align: center;
+    display: block;
+    -webkit-text-align: center;
+    margin-top: 7%;
+}
+
+#Container {
+    background-color: gray;
+    position: absolute;
+    width: 70%;
+    height: 85%;
+    left: 2.5%;
+    top: 5%;
+    border-radius: 15px;
+}
+
+.Box {
+    position: absolute;
+    background-color: #191919;
+    border: 5px #7f7f7f solid;
+    border-radius: 10px;
+    width: 11%;
+    height: 5.5%;
+    color: white;
+    transition: 200ms;
+}
+
+.Box:hover {
+    background-color: #d1d1d1;
+    color: black;
+    border-color: #191919;
+    cursor: pointer;
+}
+
+.Box > span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 200%;
+    cursor: default;
+}
+
+.Box > span:hover {
+    cursor: pointer;
+}
+
+iframe {
+    border: none;
+}

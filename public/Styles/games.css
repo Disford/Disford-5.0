@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+#Title {
+    background: linear-gradient(120deg, #0038FF, #B800D6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: absolute;
+    text-align: center;
+    margin-top: 4%;
+    margin-left: 50%;
+    transform: translate(-50%, 0%);
+    font-size: 500%;
+}
+
+#Version {
+    position: absolute;
+    bottom: 2%;
+    left: 2%;
+    color: rgb(69,69,69);
+}
+
+#ContentContainer {
+    width: 95%;
+    height: 80%;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    display: flex;
+    justify-content: center;
+}
+
+.GamesButton {
+    margin-left: 1%;
+    width: 5%;
+    height: 11%;
+    background-color: #191919;
+    color: white;
+    border-radius: 10px;
+    border: #d1d1d1 3px solid;
+    transition: 200ms;
+}
+
+.GamesButton:hover {
+    background-color: #d1d1d1;
+    color: black;
+    border-color: #191919;
+    cursor: pointer;
+}
+
+.GamesImage {
+    width: 65%;
+    height: 65%;
+    margin-left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.GamesImage:hover {
+    cursor: pointer;
+}
+
+.GamesText {
+    font-size: 1em;
+    text-align: center;
+    text-wrap: nowrap;
+}
+
+.GamesText:hover {
+    cursor: pointer;
+}

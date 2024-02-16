@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clever | Portal</title>
+    <link rel="icon" href="/Images/Logo.png"/>
+    <link rel="stylesheet" href="/Styles/dev.css">
+</head>
+<body>
+    <nav id="navBar">
+        <img src="/Images/Logo.png" id="navLogo">
+        <span id="navTitle">Disford</span>
+        <button id="navHome" class="navButton" onclick="window.location.href = '/'"><span class="navButtonText">Home</span></button>
+        <button id="navChat" class="navButton" onclick="window.location.href = '/chat'"><span class="navButtonText">Chat</span></button>
+        <button id="navGames" class="navButton" onclick="window.location.href = '/Games'"><span class="navButtonText">Games</span></button>
+        <button id="navProxy" class="navButton" onclick="window.location.href = `/load.html?load=https:\/\/typeracer.letz.dev&title=Proxy`"><span class="navButtonText">Proxy</span></button>
+    </nav>
+
+    <main>
+        <form onsubmit="motd(document.getElementById('motdInput').value)" id="motdForm">
+            <span id="motdText">MOTD</span>
+            <input type="text" id="motdInput">
+            <input type="submit" id="motdSubmit">
+        </form>
+
+        <div onsubmit="" id="chatForm">
+            <span id="chatText">Chat Clear</span>
+            <button class="chatButton" style="margin-top: 25%;" onclick="school123Clear()">school123</button>
+            <button class="chatButton" onclick="nontClear()">nont</button>
+            <button class="chatButton" onclick="main_gcClear()">main_gc</button>
+            <button class="chatButton" onclick="allClear()">All</button>
+        </div>
+    </main>
+
+    <span id="Version">Version 4.0</span>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        var socket = io();
+
+        const username = prompt('username');
+        const password = prompt('password');
+        if(username != 'dev' || password != 'bsfr_you_aint_dev') {
+            window.location.href = '/';
+        }
+
+        function motd(txt) {
+            socket.emit('changeMOTD', txt);
+        }
+
+        function school123Clear() {
+            socket.emit('school123Clear');
+        }
+
+        function nontClear() {
+            socket.emit('nontClear');
+        }
+
+        function main_gcClear() {
+            socket.emit('main_gcClear');
+        }
+
+        function allClear() {
+            school123Clear();
+            nontClear();
+            main_gcClear();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clever | Portal</title>
+    <link rel="icon" href="/Images/Logo.png"/>
+    <link rel="stylesheet" href="/Styles/index.css">
+    <link rel="stylesheet" href="/Styles/nav.css">
+</head>
+<body>
+    <!-- put this on every page that needs it w/style -->
+    <nav id="navBar">
+        <img src="/Images/Logo.png" id="navLogo">
+        <span id="navTitle">Disford</span>
+        <button id="navHome" class="navButton" onclick="window.location.href = '/'"><span class="navButtonText">Home</span></button>
+        <button id="navChat" class="navButton" onclick="window.location.href = '/chat'"><span class="navButtonText">Chat</span></button>
+        <button id="navGames" class="navButton" onclick="window.location.href = '/Games'"><span class="navButtonText">Games</span></button>
+        <button id="navApps" class="navButton" onclick="window.location.href = '/Apps'"><span class="navButtonText">Apps</span></button>
+        <button id="navProxy" class="navButton" onclick="window.location.href = `/load.html?load=https:\/\/google.com&title=Google`"><span class="navButtonText">Google</span></button>
+    </nav>
+
+    <div id="centerContainer">
+        <div id="centerTitle">Disford</div> <!-- div not span bcz its gonna go to a new line -->
+        <div id="centerMotd">very cool website!!!!!!!!!!!!!</div>
+        <button onclick="openAB()" id="centerAb">about:blank</button> <!-- ab = about:blank and about blank doesnt show on history -->
+    </div>
+    
+    <div id="bottomContainer">
+        <span id="bottomDiscord"><a href="https://discord.gg/wqjVp5WZhe">Discord</a></span>
+        <span id="bottomGithub"><a href="https://github.com/Disford">Github</a></span>
+        <span id="bottomLinks"><a href="https://docs.google.com/document/d/1uIPm3yMTsrH78nXmU1BNrfTIFe8MNHG6bY8-nysA7gc/edit?usp=sharing">Links</a></span>
+    </div>
+
+    <span id="Version">Version 5.0</span>
+    <script>
+        function openAB() {
+            const tab = window.open('about:blank', '_blank');
+            const iframe = tab.document.createElement('iframe');
+            const stl = iframe.style;
+            stl.border = stl.outline = 'none';
+            stl.width = '100vw';
+            stl.height = '100vh';
+            stl.position = 'fixed';
+            stl.left = stl.right = stl.top = stl.bottom = '0';
+            iframe.src = self.location;
+            tab.document.body.appendChild(iframe);
+            window.parent.window.location.replace(localStorage.getItem("panicurl") || 'https://clever.com/in/dearborn/student/portal');
+        }
+
+        function motd(txt) {
+            document.getElementById('centerMotd').innerHTML = txt;
+        }
+    </script>
+</body>
+</html>
