@@ -3,18 +3,19 @@ body {
     padding: 0;
     background-color: black;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    overflow: hidden;
 }
 
 #Title {
     background: linear-gradient(120deg, #0038FF, #B800D6);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    position: absolute;
-    text-align: center;
+    font-size: 500%;
+    position: fixed;
     margin-top: 4%;
     margin-left: 50%;
     transform: translate(-50%, 0%);
-    font-size: 500%;
+    text-align: center;
 }
 
 #Version {
@@ -25,8 +26,8 @@ body {
 }
 
 #ContentContainer {
-    width: 95%;
-    height: 80%;
+    width: 100%;
+    height: 85%;
     position: absolute;
     top: 20%;
     left: 50%;
@@ -35,10 +36,21 @@ body {
     justify-content: center;
 }
 
+#ContentContainer2 {
+    width: 100%;
+    height: 85%;
+    position: absolute;
+    top: 34.2%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    display: flex;
+    justify-content: center;
+}
+
 .GamesButton {
     margin-left: 1%;
-    width: 5%;
-    height: 11%;
+    width: 6%;
+    height: 13.2%;
     background-color: #191919;
     color: white;
     border-radius: 10px;
@@ -54,18 +66,21 @@ body {
 }
 
 .GamesImage {
+    border: #d1d1d1 2px solid;
+    border-radius: 7px;
     width: 65%;
     height: 65%;
     margin-left: 50%;
     transform: translate(-50%, 0%);
 }
 
-.GamesImage:hover {
+.GamesButton:hover > .GamesImage {
+    border-color: #191919;
     cursor: pointer;
 }
 
 .GamesText {
-    font-size: 1em;
+    font-size: 0.8em;
     text-align: center;
     text-wrap: nowrap;
 }

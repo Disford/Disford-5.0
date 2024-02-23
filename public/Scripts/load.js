@@ -1,7 +1,7 @@
 const urlParams = new URLSearchParams(window.location.search);
 const loadValue = urlParams.get('load');
 const titleValue = urlParams.get('title');
-document.querySelector('iframe').src = __uv$config.prefix + __uv$config.encodeUrl(loadValue);
+document.querySelector('iframe').src = loadValue;
 document.getElementById('Title').innerHTML = titleValue;
 
 function fullscreen() {

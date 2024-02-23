@@ -17,52 +17,56 @@
     </nav>
 
     <main>
-        <form onsubmit="motd(document.getElementById('motdInput').value)" id="motdForm">
+        <div id="motdForm" onsubmit="">
             <span id="motdText">MOTD</span>
-            <input type="text" id="motdInput">
-            <input type="submit" id="motdSubmit">
-        </form>
+            <button id="motdSubmit" onclick="motd()">Change</button>
+        </div>
 
         <div onsubmit="" id="chatForm">
             <span id="chatText">Chat Clear</span>
             <button class="chatButton" style="margin-top: 25%;" onclick="school123Clear()">school123</button>
             <button class="chatButton" onclick="nontClear()">nont</button>
             <button class="chatButton" onclick="main_gcClear()">main_gc</button>
+            <button class="chatButton" onclick="supportClear()">support</button>
             <button class="chatButton" onclick="allClear()">All</button>
         </div>
     </main>
 
-    <span id="Version">Version 4.0</span>
+    <span id="Version">Version 5.0</span>
     <script src="/socket.io/socket.io.js"></script>
     <script>
         var socket = io();
 
         const username = prompt('username');
         const password = prompt('password');
-        if(username != 'dev' || password != 'bsfr_you_aint_dev') {
-            window.location.href = '/';
-        }
 
-        function motd(txt) {
-            socket.emit('changeMOTD', txt);
+        function motd() {
+            const txt = prompt("what do u want the motd to be");
+            console.log(txt);
+            socket.emit('changeMOTD', txt, username, password);
         }
 
         function school123Clear() {
-            socket.emit('school123Clear');
+            socket.emit('school123Clear', username, password);
         }
 
         function nontClear() {
-            socket.emit('nontClear');
+            socket.emit('nontClear', username, password);
         }
 
         function main_gcClear() {
-            socket.emit('main_gcClear');
+            socket.emit('main_gcClear', username, password);
+        }
+
+        function supportClear() {
+            socket.emit('supportClear', username, password);
         }
 
         function allClear() {
             school123Clear();
             nontClear();
             main_gcClear();
+            supportClear();
         }
     </script>
 </body>

@@ -117,25 +117,13 @@ body {
     height: 10%;
 }
 
-#motdInput {
-    border: white solid 2px;
-    border-radius: 3px;
-    background-color: #1c1c1c;
-    color: white;
-    position: absolute;
-    top: 12%;
-    left: 50%;
-    transform: translate(-50%, -5%);
-    height: 10%;
-}
-
 #motdSubmit {
     border: white solid 2px;
     border-radius: 3px;
     background-color: #1c1c1c;
     color: white;
     position: absolute;
-    top: 26%;
+    top: 12%;
     left: 50%;
     transform: translate(-50%, -5%);
     width: 90%;

@@ -1,1 +1,1 @@
-<script>motd('Disford 4.1')</script>
+<script>motd('hi')</script>
