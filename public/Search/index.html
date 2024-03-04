@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clever | Portal</title>
+    <link rel="icon" href="/Images/Logo.png"/>
+    <link rel="stylesheet" href="/Styles/search.css">
+    <link rel="stylesheet" href="/Styles/nav.css">
+
+    <script src="/uv/uv.bundle.js" charset="UTF-8"></script>
+    <script src="/uv/uv.config.js"></script>
+    <script src="/Scripts/preload.js"></script>
+</head>
+<body>
+    <nav id="navBar">
+        <img src="/Images/Logo.png" id="navLogo">
+        <span id="navTitle">Disford</span>
+        <button id="navHome" class="navButton" onclick="window.location.href = '/'"><span class="navButtonText">Home</span></button>
+        <button id="navChat" class="navButton" onclick="window.location.href = '/chat'"><span class="navButtonText">Chat</span></button>
+        <button id="navGames" class="navButton" onclick="window.location.href = '/Games'"><span class="navButtonText">Games</span></button>
+        <button id="navApps" class="navButton" onclick="window.location.href = '/Apps'"><span class="navButtonText">Apps</span></button>
+        <button id="navProxy" class="navButton" onclick="window.location.href = `/Search`"><span class="navButtonText">Search</span></button>
+    </nav>
+    <div id="Title">Search</div>
+    <div id="center">
+        <input type="text" placeholder="Search" id="searchInput">
+        <br>
+        <button type="submit" id="searchSubmit" onclick="search()">Search</button>
+    </div>
+
+    <script>
+        function search() {
+            window.location.href = `/loaduv.html?load=https://google.com/search?q=${document.getElementById('searchInput').value}&title=Search&full=true`;
+        }
+    </script>
+</body>
+</html>

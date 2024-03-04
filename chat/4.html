@@ -7,11 +7,22 @@
     <link rel="icon" href="/Images/Logo.png"/>
   </head>
   <body>
-    <div id="header">
-      <div id="title">Disford</div>
-      <div id="logo"><img src="/Images/math.png"></div>
+    <div id="sideBar">
+      <span id="sideTitle">Chat</span>
+      <button id="sideHome" onclick="window.location.href = '/'">Home</button>
+      <input placeholder="Chat id" type="text" id="sideInput">
+      <button id="sideSubmit" onclick="gotoChat()">Chat</button>
     </div>
-    <ul id="messages"></ul>
+
+    <main id="mainContent">
+      <div id="header">
+        <div id="title">Disford</div>
+        <div id="logo"><img src="/Images/math.png"></div>
+      </div>
+  
+      <ul id="messages"></ul>
+    </main>
+
     <form id="form" action="">
       <input id="input" autocomplete="off"/>
       <button>
@@ -23,8 +34,14 @@
 
       <button class="button">Send</button>
     </form>
+
     <script src="/socket.io/socket.io.js"></script>
     <script>
+        function gotoChat() {
+          const url = document.getElementById('sideInput').value;
+          window.location.href = `/chat/${url}`;
+        }
+
         var Name = prompt('What\'s Your Name?');
         if(Name == "" || Name == null || Name == undefined) {
             Name = "Anonymous";

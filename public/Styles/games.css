@@ -88,3 +88,12 @@ body {
 .GamesText:hover {
     cursor: pointer;
 }
+
+#ownerGames {
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    transform: translate(-50%, 0%);
+    height: 4.5%;
+    width: 5%;
+}

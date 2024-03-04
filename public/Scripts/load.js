@@ -1,10 +1,14 @@
 const urlParams = new URLSearchParams(window.location.search);
 const loadValue = urlParams.get('load');
 const titleValue = urlParams.get('title');
+const isFullscreen = urlParams.get('full');
+if(isFullscreen == "true") {fullscreen();}
 document.querySelector('iframe').src = loadValue;
 document.getElementById('Title').innerHTML = titleValue;
 
 function fullscreen() {
+    document.getElementById("Container").style.borderRadius = "0";
+    document.querySelector('iframe').style.borderRadius = "0";
     document.getElementById("Container").style.zIndex = 99999;
     document.getElementById("Container").style.width = "100%";
     document.getElementById("Container").style.height = "100%";

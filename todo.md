@@ -5,24 +5,18 @@
 - More Games/Apps                |DONE|
 - Suggestions/Bugs/Support Chat  |DONE|
 - Remove Update Log              |DONE|
-- Search (replaces proxy)
+- Search (replaces proxy)        |DONE|
 - Admin/Mod password server side |DONE|
-- New nav bar ui
-- Turn google doc into page
+- Turn google doc into page      |DONE|
+- Owner Games in games           |DONE|
+- Chat ui update                 |DONE|
 
 ## 5.1
 - Disford mod (bentley) as its own page w/clear chat and motd 
 - Disford admins can edit the code
 
-## 5.2
-- Chat ui update (left panel like discord that will save the
-  chats youve been in [no cookie just url data])
-
 ## 6.0
 - Browser
-
-## idk
-- Owner Games in games
 
 ## GAMES:
 - Interstellar         |DONE|
@@ -54,5 +48,3 @@
 - Wikipedia            |DONE|
 - ChatGPT              |needs new proxy to work|
 - Coolmathgames        |DONE|
-
-**This might be one of the last updates to disford as its the last thing i really need to add i will still follow suggestions and everything and add games and fix bugs but i have ran out of ideas**
